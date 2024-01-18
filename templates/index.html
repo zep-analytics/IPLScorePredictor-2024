@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Victory Predictor</title>
+    <!-- Add any additional styling or scripts if needed -->
+
+    <script>
+        function validateTeams() {
+            var battingTeam = document.getElementById("batting_team").value;
+            var bowlingTeam = document.getElementById("bowling_team").value;
+
+            if (battingTeam === bowlingTeam) {
+                alert("Batting Team and Bowling Team cannot be the same.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>  
+
+<div style="text-align:center; margin-top:50px;">
+    <h1>IPL Victory Predictor</h1>
+    <form action="/predict" method="post" onsubmit="return validateTeams();">
+        <label for="batting_team">Select Batting Team:</label>
+        <select name="batting_team" id="batting_team" required>
+            <option value="Mumbai Indians">Mumbai Indians</option>
+            <option value="Gujarat Titans">Gujarat Titans</option>
+            <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+            <option value="Delhi Capitals">Delhi Capitals</option>
+            <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+            <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+            <option value="Lucknow Super Giants">Lucknow Super Giants</option>
+            <option value="Rajasthan Royals">Rajasthan Royals</option>
+            <option value="Chennai Super Kings">Chennai Super Kings</option>
+            <option value="Punjab Kings">Punjab Kings</option>
+        </select>
+
+        <br>
+
+        <label for="bowling_team">Select Bowling Team:</label>
+        <select name="bowling_team" id="bowling_team" required>
+            <option value="Mumbai Indians">Mumbai Indians</option>
+            <option value="Gujarat Titans">Gujarat Titans</option>
+            <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+            <option value="Delhi Capitals">Delhi Capitals</option>
+            <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+            <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+            <option value="Lucknow Super Giants">Lucknow Super Giants</option>
+            <option value="Rajasthan Royals">Rajasthan Royals</option>
+            <option value="Chennai Super Kings">Chennai Super Kings</option>
+            <option value="Punjab Kings">Punjab Kings</option>
+        </select>
+
+        <br>
+
+        <label for="selected_city">Select Venue:</label>
+        <select name="selected_city" required>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Visakhapatnam">Visakhapatnam</option>
+            <option value="Indore">Indore</option>
+            <option value="Durban">Durban</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Dharamsala">Dharamsala</option>
+            <option value="Ranchi">Ranchi</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Mohali">Mohali</option>
+            <option value="Pune">Pune</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Port Elizabeth">Port Elizabeth</option>
+            <option value="Centurion">Centurion</option>
+            <option value="Raipur">Raipur</option>
+            <option value="Sharjah">Sharjah</option>
+            <option value="Cuttack">Cuttack</option>
+            <option value="Johannesburg">Johannesburg</option>
+            <option value="Cape Town">Cape Town</option>
+            <option value="East London">East London</option>
+            <option value="Abu Dhabi">Abu Dhabi</option>
+            <option value="Kimberley">Kimberley</option>
+            <option value="Bloemfontein">Bloemfontein</option>
+        </select>
+
+        <br>
+
+        <label for="target">Target:</label>
+        <input type="number" name="target" required>
+
+        <br>
+
+        <label for="score">Score:</label>
+        <input type="number" name="score" required>
+
+        <br>
+
+        <label for="balls_left">Balls Left:</label>
+        <input type="number" name="balls_left" required>
+
+        <br>
+
+        <label for="wickets">Wickets Down:</label>
+        <input type="number" name="wickets" required>
+
+        <br>
+
+        <button type="submit">Predict Winning Probability</button>
+    </form>
+</div>
+
+</body>
+</html>
