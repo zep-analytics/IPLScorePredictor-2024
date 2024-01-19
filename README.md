@@ -34,3 +34,4 @@ This Flask web application predicts the winning probability of a team in an IPL 
 
 
 ## Screenshots
+<img width="948" alt="Screenshot 2024-01-19 123215" src="https://github.com/zep-analytics/IPLScorePredictor-2024/assets/74035326/db593518-f9ff-4f75-8287-3d02c478c3a2">
